@@ -3,3 +3,17 @@
 body{
     background: white;
 }
+
+#excusa {
+    font-size: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+
+#title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
