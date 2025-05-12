@@ -4,16 +4,39 @@ body{
     background: white;
 }
 
-#excusa {
-    font-size: 2rem;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    
+.card {
+  width: 150px;
+  height: 220px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  padding: 10px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#title {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 100px;
-    font-family: Arial, sans-serif;
+.heart,
+.diamond {
+  color: red;
+}
+
+.spade,
+.club {
+  color: black;
+}
+
+.card-top {
+  width: 100%;
+  text-align: left;
+}
+
+.card-bottom {
+    width: 100%;
+  text-align: left;
+  transform: rotate(180deg);
 }

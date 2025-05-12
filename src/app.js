@@ -3,19 +3,33 @@ import "./style.css";
 
 
 
-window.onload = function() {
-  //write your code here
-  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-  let action = ['ate', 'peed', 'crushed', 'broke'];
-  let what = ['my homework', 'my phone', 'the car'];
-  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+// Arrays con los valores y palos posibles
+const palos = [
+  { simbolo: "♦", clase: "diamond" },
+  { simbolo: "♥", clase: "heart" },
+  { simbolo: "♠", clase: "spade" },
+  { simbolo: "♣", clase: "club" }
+];
 
-  function getRanndomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  } 
+const valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
-  let excusa = `${getRanndomElement(who)} ${getRanndomElement(action)} ${getRanndomElement(what)} ${getRanndomElement(when)}`;
+// Esperamos que el DOM esté cargado para ejecutar todo
+window.onload = () => {
+  // Elegimos un palo y un valor al azar
+  const palo = palos[Math.floor(Math.random() * palos.length)];
+  const valor = valores[Math.floor(Math.random() * valores.length)];
 
-  document.getElementById("excusa").innerHTML = excusa
+  // Seleccionamos los elementos del DOM
+  const card = document.querySelector(".card");
+  const top = document.querySelector(".card-top");
+  const value = document.querySelector(".card-value");
+  const bottom = document.querySelector(".card-bottom");
 
+  // Aplicamos la clase correspondiente al palo (color)
+  card.className = "card " + palo.clase;
+
+  // Insertamos el contenido en cada parte de la carta
+  top.textContent = palo.simbolo;
+  value.textContent = valor;
+  bottom.textContent = palo.simbolo;
 };
